@@ -6,14 +6,14 @@ import (
 )
 
 // Pattern for URLs
-var Pattern string = `https?:\/\/\S+`
+var Pattern = `https?:\/\/\S+`
 var re = regexp.MustCompile(Pattern)
 
 // Linkificator holds stuff to customize linkification
 type Linkificator struct {
 	Pattern string
-	Re *regexp.Regexp
-	Attrs string
+	Re      *regexp.Regexp
+	Attrs   string
 }
 
 // Linkify plain-text
